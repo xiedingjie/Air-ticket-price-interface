@@ -46,10 +46,8 @@ class airAPI(object):
                    'queryModule': '1',
                    'lineType': 'OW', 'queryType': 'jipiaoindexquery'}
         req = requests.session()
-
-        time.sleep(1)
-
         req.get(host,headers=headers)
+        time.sleep(1)
         airInfo = req.get(url, headers=headers, params=payload).json()
 
         return airInfo
