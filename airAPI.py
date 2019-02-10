@@ -53,11 +53,10 @@ class airAPI(object):
         return airInfo
 
 if __name__ == "__main__":
-
     api = airAPI()
     api.setDepCity('广州')
     api.setArrCity('海口')
-    api.setDate('2018-11-20')
+    api.setDate('2019-3-20')
     airInfo = api.getAirInfo()
 
     for i in airInfo['data']['flights']:
